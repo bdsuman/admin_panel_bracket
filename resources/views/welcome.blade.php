@@ -1,140 +1,1227 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Laravel</title>
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bracket Plus">
+    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:image" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/bracketplus">
+    <meta property="og:title" content="Bracket Plus">
+    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    <meta property="og:image" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+    <!-- Meta -->
+    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="author" content="ThemePixels">
 
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
+    <title>Bracket Plus Responsive Bootstrap 4 Admin Template</title>
 
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
+    <!-- vendor css -->
+    <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../lib/rickshaw/rickshaw.min.css" rel="stylesheet">
+    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
+    <!-- Bracket CSS -->
+    <link rel="stylesheet" href="../css/bracket.css">
+    <link rel="stylesheet" href="../css/bracket.dark.css">
+  </head>
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
+  <body>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
+    <!-- ########## START: LEFT PANEL ########## -->
+    <div class="br-logo"><a href=""><span>[</span>bracket <i>plus</i><span>]</span></a></div>
+    <div class="br-sideleft sideleft-scrollbar">
+      <label class="sidebar-label">Navigation</label>
+      <ul class="br-sideleft-menu">
+        <li class="br-menu-item">
+          <a href="index.html" class="br-menu-link active">
+            <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i>
+            <span class="menu-item-label">Dashboard</span>
+          </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="mailbox.html" class="br-menu-link">
+            <i class="menu-item-icon icon ion-ios-email-outline tx-24"></i>
+            <span class="menu-item-label">Mailbox</span>
+          </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Cards &amp; Widgets</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="card-dashboard.html" class="sub-link">Dashboard</a></li>
+            <li class="sub-item"><a href="card-social.html" class="sub-link">Blog &amp; Social Media</a></li>
+            <li class="sub-item"><a href="card-listing.html" class="sub-link">Shop &amp; Listing</a></li>
+          </ul>
+        </li>
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-filing-outline tx-24"></i>
+            <span class="menu-item-label">UI Elements</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="accordion.html" class="sub-link">Accordion</a></li>
+            <li class="sub-item"><a href="alerts.html" class="sub-link">Alerts</a></li>
+            <li class="sub-item"><a href="buttons.html" class="sub-link">Buttons</a></li>
+            <li class="sub-item"><a href="cards.html" class="sub-link">Cards</a></li>
+            <li class="sub-item"><a href="carousel.html" class="sub-link">Carousel</a></li>
+            <li class="sub-item"><a href="dropdowns.html" class="sub-link">Dropdowns</a></li>
+            <li class="sub-item"><a href="icons.html" class="sub-link">Icons</a></li>
+            <li class="sub-item"><a href="images.html" class="sub-link">Images</a></li>
+            <li class="sub-item"><a href="list.html" class="sub-link">Lists</a></li>
+            <li class="sub-item"><a href="modal.html" class="sub-link">Modal</a></li>
+            <li class="sub-item"><a href="media.html" class="sub-link">Media Object</a></li>
+            <li class="sub-item"><a href="pagination.html" class="sub-link">Pagination</a></li>
+            <li class="sub-item"><a href="popups.html" class="sub-link">Tooltip &amp; Popover</a></li>
+            <li class="sub-item"><a href="progress.html" class="sub-link">Progress</a></li>
+            <li class="sub-item"><a href="spinners.html" class="sub-link">Spinners</a></li>
+            <li class="sub-item"><a href="typography.html" class="sub-link">Typography</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon ion-ios-redo-outline tx-24"></i>
+            <span class="menu-item-label">Navigation</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="navigation.html" class="sub-link">Basic Nav</a></li>
+            <li class="sub-item"><a href="navigation-layouts.html" class="sub-link">Nav Layouts</a></li>
+            <li class="sub-item"><a href="navigation-effects.html" class="sub-link">Nav Effects</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
+            <span class="menu-item-label">Charts</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="chart-morris.html" class="sub-link">Morris Charts</a></li>
+            <li class="sub-item"><a href="chart-flot.html" class="sub-link">Flot Charts</a></li>
+            <li class="sub-item"><a href="chart-chartjs.html" class="sub-link">Chart JS</a></li>
+            <li class="sub-item"><a href="chart-echarts.html" class="sub-link">ECharts</a></li>
+            <li class="sub-item"><a href="chart-rickshaw.html" class="sub-link">Rickshaw</a></li>
+            <li class="sub-item"><a href="chart-chartist.html" class="sub-link">Chartist</a></li>
+            <li class="sub-item"><a href="chart-sparkline.html" class="sub-link">Sparkline</a></li>
+            <li class="sub-item"><a href="chart-peity.html" class="sub-link">Peity</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
+            <span class="menu-item-label">Forms</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="form-elements.html" class="sub-link">Form Elements</a></li>
+            <li class="sub-item"><a href="form-layouts.html" class="sub-link">Form Layouts</a></li>
+            <li class="sub-item"><a href="form-validation.html" class="sub-link">Form Validation</a></li>
+            <li class="sub-item"><a href="form-wizards.html" class="sub-link">Form Wizards</a></li>
+            <li class="sub-item"><a href="form-editor-code.html" class="sub-link">Code Editor</a></li>
+            <li class="sub-item"><a href="form-editor-text.html" class="sub-link">Text Editor</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-bookmarks-outline tx-20"></i>
+            <span class="menu-item-label">Tables</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub nav flex-column">
+            <li class="sub-item"><a href="table-basic.html" class="sub-link">Basic Table</a></li>
+            <li class="sub-item"><a href="table-datatable.html" class="sub-link">Data Table</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-navigate-outline tx-24"></i>
+            <span class="menu-item-label">Maps</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="map-google.html" class="sub-link">Google Maps</a></li>
+            <li class="sub-item"><a href="map-leaflet.html" class="sub-link">Leaflet Maps</a></li>
+            <li class="sub-item"><a href="map-vector.html" class="sub-link">Vector Maps</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-color-filter-outline tx-24"></i>
+            <span class="menu-item-label">Skins</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="skin-select2.html" class="sub-link">Select2</a></li>
+            <li class="sub-item"><a href="skin-rangeslider.html" class="sub-link">Ion RangeSlider</a></li>
+            <li class="sub-item"><a href="skin-input-form.html" class="sub-link">Textbox Form</a></li>
+            <li class="sub-item"><a href="skin-file-browser.html" class="sub-link">File Browser</a></li>
+            <li class="sub-item"><a href="skin-datepicker.html" class="sub-link">Datepicker</a></li>
+            <li class="sub-item"><a href="skin-template.html" class="sub-link">Template</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-briefcase-outline tx-22"></i>
+            <span class="menu-item-label">Utilities</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="background.html" class="sub-link">Background</a></li>
+            <li class="sub-item"><a href="border.html" class="sub-link">Border</a></li>
+            <li class="sub-item"><a href="height.html" class="sub-link">Height</a></li>
+            <li class="sub-item"><a href="margin.html" class="sub-link">Margin</a></li>
+            <li class="sub-item"><a href="padding.html" class="sub-link">Padding</a></li>
+            <li class="sub-item"><a href="position.html" class="sub-link">Position</a></li>
+            <li class="sub-item"><a href="typography-util.html" class="sub-link">Typography</a></li>
+            <li class="sub-item"><a href="width.html" class="sub-link">Width</a></li>
+          </ul>
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="pages.html" class="br-menu-link">
+            <i class="menu-item-icon icon ion-ios-paper-outline tx-22"></i>
+            <span class="menu-item-label">Apps &amp; Pages</span>
+          </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="layouts.html" class="br-menu-link">
+            <i class="menu-item-icon icon ion-ios-book-outline tx-22"></i>
+            <span class="menu-item-label">Layouts</span>
+          </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <a href="sitemap.html" class="br-menu-link">
+            <i class="menu-item-icon icon ion-ios-list-outline tx-22"></i>
+            <span class="menu-item-label">Sitemap</span>
+          </a><!-- br-menu-link -->
+        </li><!-- br-menu-item -->
+      </ul><!-- br-sideleft-menu -->
 
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
+      <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Information Summary</label>
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
+      <div class="info-list">
+        <div class="info-list-item">
+          <div>
+            <p class="info-list-label">Memory Usage</p>
+            <h5 class="info-list-amount">32.3%</h5>
+          </div>
+          <span class="peity-bar" data-peity='{ "fill": ["#336490"], "height": 35, "width": 60 }'>8,6,5,9,8,4,9,3,5,9</span>
+        </div><!-- info-list-item -->
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
+        <div class="info-list-item">
+          <div>
+            <p class="info-list-label">CPU Usage</p>
+            <h5 class="info-list-amount">140.05</h5>
+          </div>
+          <span class="peity-bar" data-peity='{ "fill": ["#1C7973"], "height": 35, "width": 60 }'>4,3,5,7,12,10,4,5,11,7</span>
+        </div><!-- info-list-item -->
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
+        <div class="info-list-item">
+          <div>
+            <p class="info-list-label">Disk Usage</p>
+            <h5 class="info-list-amount">82.02%</h5>
+          </div>
+          <span class="peity-bar" data-peity='{ "fill": ["#8E4246"], "height": 35, "width": 60 }'>1,2,1,3,2,10,4,12,7</span>
+        </div><!-- info-list-item -->
 
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
+        <div class="info-list-item">
+          <div>
+            <p class="info-list-label">Daily Traffic</p>
+            <h5 class="info-list-amount">62,201</h5>
+          </div>
+          <span class="peity-bar" data-peity='{ "fill": ["#9C7846"], "height": 35, "width": 60 }'>3,12,7,9,2,3,4,5,2</span>
+        </div><!-- info-list-item -->
+      </div><!-- info-list -->
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
+      <br>
+    </div><!-- br-sideleft -->
+    <!-- ########## END: LEFT PANEL ########## -->
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
+    <!-- ########## START: HEAD PANEL ########## -->
+    <div class="br-header">
+      <div class="br-header-left">
+        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
+        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a></div>
+        <div class="input-group hidden-xs-down wd-170 transition">
+          <input id="searchbox" type="text" class="form-control" placeholder="Search">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+          </span>
+        </div><!-- input-group -->
+      </div><!-- br-header-left -->
+      <div class="br-header-right">
+        <nav class="nav">
+          <div class="dropdown">
+            <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
+              <i class="icon ion-ios-email-outline tx-24"></i>
+              <!-- start: if statement -->
+              <span class="square-8 bg-danger pos-absolute t-15 r-0 rounded-circle"></span>
+              <!-- end: if statement -->
+            </a>
+            <div class="dropdown-menu dropdown-menu-header">
+              <div class="dropdown-menu-label">
+                <label>Messages</label>
+                <a href="">+ Add New Message</a>
+              </div><!-- d-flex -->
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
-                            </div>
-                        </div>
+              <div class="media-list">
+                <!-- loop starts here -->
+                <a href="" class="media-list-link">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <div>
+                        <p>Donna Seay</p>
+                        <span>2 minutes ago</span>
+                      </div><!-- d-flex -->
+                      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.</p>
                     </div>
-                </div>
-
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
-                        </div>
+                  </div><!-- media -->
+                </a>
+                <!-- loop ends here -->
+                <a href="" class="media-list-link read">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <div>
+                        <p>Samantha Francis</p>
+                        <span>3 hours ago</span>
+                      </div><!-- d-flex -->
+                      <p>My entire soul, like these sweet mornings of spring.</p>
                     </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                  </div><!-- media -->
+                </a>
+                <a href="" class="media-list-link read">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <div>
+                        <p>Robert Walker</p>
+                        <span>5 hours ago</span>
+                      </div><!-- d-flex -->
+                      <p>I should be incapable of drawing a single stroke at the present moment...</p>
                     </div>
+                  </div><!-- media -->
+                </a>
+                <a href="" class="media-list-link read">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <div>
+                        <p>Larry Smith</p>
+                        <span>Yesterday</span>
+                      </div><!-- d-flex -->
+                      <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes...</p>
+                    </div>
+                  </div><!-- media -->
+                </a>
+                <div class="dropdown-footer">
+                  <a href=""><i class="fa fa-angle-down"></i> Show All Messages</a>
                 </div>
-            </div>
+              </div><!-- media-list -->
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <div class="dropdown">
+            <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
+              <i class="icon ion-ios-bell-outline tx-24"></i>
+              <!-- start: if statement -->
+              <span class="square-8 bg-danger pos-absolute t-15 r-5 rounded-circle"></span>
+              <!-- end: if statement -->
+            </a>
+            <div class="dropdown-menu dropdown-menu-header">
+              <div class="dropdown-menu-label">
+                <label>Notifications</label>
+                <a href="">Mark All as Read</a>
+              </div><!-- d-flex -->
+
+              <div class="media-list">
+                <!-- loop starts here -->
+                <a href="" class="media-list-link read">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <p class="noti-text"><strong>Suzzeth Bungaos</strong> tagged you and 18 others in a post.</p>
+                      <span>October 03, 2017 8:45am</span>
+                    </div>
+                  </div><!-- media -->
+                </a>
+                <!-- loop ends here -->
+                <a href="" class="media-list-link read">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <p class="noti-text"><strong>Mellisa Brown</strong> appreciated your work <strong>The Social Network</strong></p>
+                      <span>October 02, 2017 12:44am</span>
+                    </div>
+                  </div><!-- media -->
+                </a>
+                <a href="" class="media-list-link read">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <p class="noti-text">20+ new items added are for sale in your <strong>Sale Group</strong></p>
+                      <span>October 01, 2017 10:20pm</span>
+                    </div>
+                  </div><!-- media -->
+                </a>
+                <a href="" class="media-list-link read">
+                  <div class="media">
+                    <img src="https://via.placeholder.com/500" alt="">
+                    <div class="media-body">
+                      <p class="noti-text"><strong>Julius Erving</strong> wants to connect with you on your conversation with <strong>Ronnie Mara</strong></p>
+                      <span>October 01, 2017 6:08pm</span>
+                    </div>
+                  </div><!-- media -->
+                </a>
+                <div class="dropdown-footer">
+                  <a href=""><i class="fa fa-angle-down"></i> Show All Notifications</a>
+                </div>
+              </div><!-- media-list -->
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+          <div class="dropdown">
+            <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+              <span class="logged-name hidden-md-down">Katherine</span>
+              <img src="https://via.placeholder.com/500" class="wd-32 rounded-circle" alt="">
+              <span class="square-10 bg-success"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-header wd-250">
+              <div class="tx-center">
+                <a href=""><img src="https://via.placeholder.com/500" class="wd-80 rounded-circle" alt=""></a>
+                <h6 class="logged-fullname">Katherine P. Lumaad</h6>
+                <p>youremail@domain.com</p>
+              </div>
+              <hr>
+              <div class="tx-center">
+                <span class="profile-earning-label">Earnings After Taxes</span>
+                <h3 class="profile-earning-amount">$13,230 <i class="icon ion-ios-arrow-thin-up tx-success"></i></h3>
+                <span class="profile-earning-text">Based on list price.</span>
+              </div>
+              <hr>
+              <ul class="list-unstyled user-profile-nav">
+                <li><a href=""><i class="icon ion-ios-person"></i> Edit Profile</a></li>
+                <li><a href=""><i class="icon ion-ios-gear"></i> Settings</a></li>
+                <li><a href=""><i class="icon ion-ios-download"></i> Downloads</a></li>
+                <li><a href=""><i class="icon ion-ios-star"></i> Favorites</a></li>
+                <li><a href=""><i class="icon ion-ios-folder"></i> Collections</a></li>
+                <li><a href=""><i class="icon ion-power"></i> Sign Out</a></li>
+              </ul>
+            </div><!-- dropdown-menu -->
+          </div><!-- dropdown -->
+        </nav>
+        <div class="navicon-right">
+          <a id="btnRightMenu" href="" class="pos-relative">
+            <i class="icon ion-ios-chatboxes-outline"></i>
+            <!-- start: if statement -->
+            <span class="square-8 bg-danger pos-absolute t-10 r--5 rounded-circle"></span>
+            <!-- end: if statement -->
+          </a>
+        </div><!-- navicon-right -->
+      </div><!-- br-header-right -->
+    </div><!-- br-header -->
+    <!-- ########## END: HEAD PANEL ########## -->
+
+    <!-- ########## START: RIGHT PANEL ########## -->
+    <div class="br-sideright">
+      <ul class="nav nav-tabs sidebar-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" role="tab" href="#contacts"><i class="icon ion-ios-contact-outline tx-24"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" role="tab" href="#attachments"><i class="icon ion-ios-folder-outline tx-22"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" role="tab" href="#calendar"><i class="icon ion-ios-calendar-outline tx-24"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" role="tab" href="#settings"><i class="icon ion-ios-gear-outline tx-24"></i></a>
+        </li>
+      </ul><!-- sidebar-tabs -->
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane pos-absolute a-0 mg-t-60 contact-scrollbar active" id="contacts" role="tabpanel">
+          <label class="sidebar-label pd-x-25 mg-t-25">Online Contacts</label>
+          <div class="contact-list pd-x-10">
+            <a href="" class="contact-list-link new">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-success bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Marilyn Tarter</p>
+                  <span>Clemson, CA</span>
+                </div>
+                <span class="tx-info tx-12"><span class="square-8 bg-info rounded-circle"></span> 1 new</span>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-success bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p class="mg-b-0 ">Belinda Connor</p>
+                  <span>Fort Kent, ME</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link new">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-success bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Britanny Cevallos</p>
+                  <span>Shiboygan Falls, WI</span>
+                </div>
+                <span class="tx-info tx-12"><span class="square-8 bg-info rounded-circle"></span> 3 new</span>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link new">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-success bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Brandon Lawrence</p>
+                  <span>Snohomish, WA</span>
+                </div>
+                <span class="tx-info tx-12"><span class="square-8 bg-info rounded-circle"></span> 1 new</span>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-success bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Andrew Wiggins</p>
+                  <span>Springfield, MA</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-success bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Theodore Gristen</p>
+                  <span>Nashville, TN</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-success bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Deborah Miner</p>
+                  <span>North Shore, CA</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+          </div><!-- contact-list -->
+
+
+          <label class="sidebar-label pd-x-25 mg-t-25">Offline Contacts</label>
+          <div class="contact-list pd-x-10">
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-gray-500 bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Marilyn Tarter</p>
+                  <span>Clemson, CA</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-gray-500 bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Belinda Connor</p>
+                  <span>Fort Kent, ME</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-gray-500 bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Britanny Cevallos</p>
+                  <span>Shiboygan Falls, WI</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-gray-500 bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Brandon Lawrence</p>
+                  <span>Snohomish, WA</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-gray-500 bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Andrew Wiggins</p>
+                  <span>Springfield, MA</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-gray-500 bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Theodore Gristen</p>
+                  <span>Nashville, TN</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+            <a href="" class="contact-list-link">
+              <div class="d-flex">
+                <div class="pos-relative">
+                  <img src="https://via.placeholder.com/500" alt="">
+                  <div class="contact-status-indicator bg-gray-500 bd-white"></div>
+                </div>
+                <div class="contact-person">
+                  <p>Deborah Miner</p>
+                  <span>North Shore, CA</span>
+                </div>
+              </div><!-- d-flex -->
+            </a><!-- contact-list-link -->
+          </div><!-- contact-list -->
+
+        </div><!-- #contacts -->
+
+
+        <div class="tab-pane pos-absolute a-0 mg-t-60 attachment-scrollbar" id="attachments" role="tabpanel">
+          <label class="sidebar-label pd-x-25 mg-t-25">Recent Attachments</label>
+          <div class="media-file-list">
+            <div class="media">
+              <div class="pd-10 bg-gray-500 bg-mojito wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-image tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">IMG_43445</p>
+                <p class="mg-b-0 tx-12 op-5">JPG Image</p>
+                <p class="mg-b-0 tx-12 op-5">1.2mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-purple wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-video tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">VID_6543</p>
+                <p class="mg-b-0 tx-12 op-5">MP4 Video</p>
+                <p class="mg-b-0 tx-12 op-5">24.8mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-reef wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-word tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">Tax_Form</p>
+                <p class="mg-b-0 tx-12 op-5">Word Document</p>
+                <p class="mg-b-0 tx-12 op-5">5.5mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-firewatch wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-pdf tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">Getting_Started</p>
+                <p class="mg-b-0 tx-12 op-5">PDF Document</p>
+                <p class="mg-b-0 tx-12 op-5">12.7mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-firewatch wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-pdf tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">Introduction</p>
+                <p class="mg-b-0 tx-12 op-5">PDF Document</p>
+                <p class="mg-b-0 tx-12 op-5">7.7mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-mojito wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-image tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">IMG_43420</p>
+                <p class="mg-b-0 tx-12 op-5">JPG Image</p>
+                <p class="mg-b-0 tx-12 op-5">2.2mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-mojito wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-image tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">IMG_43447</p>
+                <p class="mg-b-0 tx-12 op-5">JPG Image</p>
+                <p class="mg-b-0 tx-12 op-5">3.2mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-purple wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-video tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">VID_6545</p>
+                <p class="mg-b-0 tx-12 op-5">AVI Video</p>
+                <p class="mg-b-0 tx-12 op-5">14.8mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+            <div class="media mg-t-20">
+              <div class="pd-10 bg-gray-500 bg-reef wd-50 ht-60 tx-center d-flex align-items-center justify-content-center">
+                <i class="far fa-file-word tx-28 tx-white"></i>
+              </div>
+              <div class="media-body tx-gray-800 mg-l-10 mg-r-auto">
+                <p class="mg-b-0 tx-13">Secret_Document</p>
+                <p class="mg-b-0 tx-12 op-5">Word Document</p>
+                <p class="mg-b-0 tx-12 op-5">4.5mb</p>
+              </div><!-- media-body -->
+              <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+            </div><!-- media -->
+          </div><!-- media-list -->
+        </div><!-- #history -->
+        <div class="tab-pane pos-absolute a-0 mg-t-60 schedule-scrollbar" id="calendar" role="tabpanel">
+          <label class="sidebar-label pd-x-25 mg-t-25">Time &amp; Date</label>
+          <div class="pd-x-25">
+            <h2 id="brTime" class="br-time"></h2>
+            <h6 id="brDate" class="br-date"></h6>
+          </div>
+
+          <label class="sidebar-label pd-x-25 mg-t-25">Events Calendar</label>
+          <div class="datepicker sidebar-datepicker"></div>
+
+
+          <label class="sidebar-label pd-x-25 mg-t-25">Event Today</label>
+          <div class="pd-x-25">
+            <div class="list-group sidebar-event-list mg-b-20">
+              <div class="list-group-item">
+                <div>
+                  <h6 class="tx-white tx-13 mg-b-5 tx-normal">Roven's 32th Birthday</h6>
+                  <p class="mg-b-0 tx-gray-600 tx-12">2:30PM</p>
+                </div>
+                <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+              </div><!-- list-group-item -->
+              <div class="list-group-item">
+                <div>
+                  <h6 class="tx-white tx-13 mg-b-5 tx-normal">Regular Workout Schedule</h6>
+                  <p class="mg-b-0 tx-gray-600 tx-12">7:30PM</p>
+                </div>
+                <a href="" class="more"><i class="icon ion-android-more-vertical tx-18"></i></a>
+              </div><!-- list-group-item -->
+            </div><!-- list-group -->
+
+            <a href="" class="btn btn-block btn-primary tx-uppercase tx-10 tx-mont tx-semibold">+ Add Event</a>
+            <br>
+          </div>
+
         </div>
-    </body>
+        <div class="tab-pane pos-absolute a-0 mg-t-60 settings-scrollbar" id="settings" role="tabpanel">
+          <label class="sidebar-label pd-x-25 mg-t-25">Quick Settings</label>
+
+          <div class="sidebar-settings-item">
+            <h6 class="tx-13 tx-normal">Sound Notification</h6>
+            <p class="op-5 tx-13">Play an alert sound everytime there is a new notification.</p>
+            <div class="br-switchbutton checked">
+              <input type="hidden" name="switch1" value="true">
+              <span></span>
+            </div><!-- br-switchbutton -->
+          </div>
+          <div class="sidebar-settings-item">
+            <h6 class="tx-13 tx-normal">2 Steps Verification</h6>
+            <p class="op-5 tx-13">Sign in using a two step verification by sending a verification code to your phone.</p>
+            <div class="br-switchbutton">
+              <input type="hidden" name="switch2" value="false">
+              <span></span>
+            </div><!-- br-switchbutton -->
+          </div>
+          <div class="sidebar-settings-item">
+            <h6 class="tx-13 tx-normal">Location Services</h6>
+            <p class="op-5 tx-13">Allowing us to access your location</p>
+            <div class="br-switchbutton">
+              <input type="hidden" name="switch3" value="false">
+              <span></span>
+            </div><!-- br-switchbutton -->
+          </div>
+          <div class="sidebar-settings-item">
+            <h6 class="tx-13 tx-normal">Newsletter Subscription</h6>
+            <p class="op-5 tx-13">Enables you to send us news and updates send straight to your email.</p>
+            <div class="br-switchbutton checked">
+              <input type="hidden" name="switch4" value="true">
+              <span></span>
+            </div><!-- br-switchbutton -->
+          </div>
+          <div class="sidebar-settings-item">
+            <h6 class="tx-13 tx-normal">Your email</h6>
+            <div class="pos-relative">
+              <input type="email" name="email" class="form-control" value="janedoe@domain.com">
+            </div>
+          </div>
+
+          <div class="pd-y-20 pd-x-25">
+            <h6 class="tx-13 tx-normal tx-white mg-b-20">More Settings</h6>
+            <a href="" class="btn btn-block btn-outline-secondary tx-uppercase tx-11 tx-spacing-2">Account Settings</a>
+            <a href="" class="btn btn-block btn-outline-secondary tx-uppercase tx-11 tx-spacing-2">Privacy Settings</a>
+          </div>
+        </div>
+      </div><!-- tab-content -->
+    </div><!-- br-sideright -->
+    <!-- ########## END: RIGHT PANEL ########## --->
+
+    <!-- ########## START: MAIN PANEL ########## -->
+    <div class="br-mainpanel">
+      <div class="br-pagetitle">
+        <i class="icon ion-ios-home-outline tx-70 lh-0"></i>
+        <div>
+          <h4>Dashboard</h4>
+          <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
+        </div>
+      </div><!-- d-flex -->
+
+      <div class="br-pagebody">
+
+        <div class="row row-sm mg-b-20">
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-info rounded overflow-hidden">
+              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
+                <i class="ion ion-earth tx-60 lh-0 tx-white op-7"></i>
+                <div class="mg-l-20">
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today's Visits</p>
+                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">1,975,224</p>
+                  <span class="tx-11 tx-roboto tx-white-8">24% higher yesterday</span>
+                </div>
+              </div>
+              <div id="ch1" class="ht-50 tr-y-1"></div>
+            </div>
+          </div><!-- col-3 -->
+          <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0">
+            <div class="bg-purple rounded overflow-hidden">
+              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
+                <i class="ion ion-bag tx-60 lh-0 tx-white op-7"></i>
+                <div class="mg-l-20">
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today Sales</p>
+                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">$329,291</p>
+                  <span class="tx-11 tx-roboto tx-white-8">$390,212 before tax</span>
+                </div>
+              </div>
+              <div id="ch3" class="ht-50 tr-y-1"></div>
+            </div>
+          </div><!-- col-3 -->
+          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
+            <div class="bg-teal rounded overflow-hidden">
+              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
+                <i class="ion ion-monitor tx-60 lh-0 tx-white op-7"></i>
+                <div class="mg-l-20">
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">% Unique Visits</p>
+                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">54.45%</p>
+                  <span class="tx-11 tx-roboto tx-white-8">23% average duration</span>
+                </div>
+              </div>
+              <div id="ch2" class="ht-50 tr-y-1"></div>
+            </div>
+          </div><!-- col-3 -->
+          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
+            <div class="bg-primary rounded overflow-hidden">
+              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
+                <i class="ion ion-clock tx-60 lh-0 tx-white op-7"></i>
+                <div class="mg-l-20">
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Bounce Rate</p>
+                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">32.16%</p>
+                  <span class="tx-11 tx-roboto tx-white-8">65.45% on average time</span>
+                </div>
+              </div>
+              <div id="ch4" class="ht-50 tr-y-1"></div>
+            </div>
+          </div><!-- col-3 -->
+        </div><!-- row -->
+
+        <div class="row row-sm mg-t-20">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="d-md-flex justify-content-between pd-25">
+                <div>
+                  <h6 class="tx-13 tx-uppercase tx-white tx-spacing-1">How Engaged Our Users Daily</h6>
+                  <p>Past 30 Days — Last Updated Oct 14, 2017</p>
+                </div>
+                <div class="d-sm-flex">
+                  <div>
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Bounce Rate</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">23.32%</h4>
+                    <span class="tx-12 tx-success tx-roboto">2.7% increased</span>
+                  </div>
+                  <div class="bd-sm-l bd-white-1-force pd-sm-l-20 mg-sm-l-20 mg-t-20 mg-sm-t-0">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Page Views</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">38.20%</h4>
+                    <span class="tx-12 tx-danger tx-roboto">4.65% decreased</span>
+                  </div>
+                  <div class="bd-sm-l bd-white-1-force pd-sm-l-20 mg-sm-l-20 mg-t-20 mg-sm-t-0">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Time On Site</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">12:30</h4>
+                    <span class="tx-12 tx-success tx-roboto">1.22% increased</span>
+                  </div>
+                </div><!-- d-flex -->
+              </div><!-- d-flex -->
+
+              <div class="pd-l-25 pd-r-15 pd-b-25">
+                <div id="ch5" class="ht-250 ht-sm-300"></div>
+              </div>
+            </div><!-- card -->
+
+            <div class="card bd-gray-400 pd-25 mg-t-20">
+              <div class="d-md-flex justify-content-between">
+                <div>
+                  <h6 class="tx-13 tx-uppercase tx-white tx-semibold tx-spacing-1">How Engaged Our Users Daily</h6>
+                  <p>Past 30 Days — Last Updated Oct 14, 2017</p>
+                </div>
+                <div class="wd-200">
+                  <select class="form-control select2" data-placeholder="Choose location">
+                    <option label="Choose one"></option>
+                    <option value="1" selected>New York</option>
+                    <option value="2">San Francisco</option>
+                    <option value="3">Los Angeles</option>
+                    <option value="4">Chicago</option>
+                    <option value="5">Seattle</option>
+                  </select>
+                </div><!-- wd-200 -->
+              </div><!-- d-flex -->
+              <div class="row mg-t-20">
+                <div class="col-sm-9">
+                  <div id="ch12" class="ht-250 ht-sm-300"></div>
+                </div><!-- col-9 -->
+                <div class="col-sm-3 mg-t-40 mg-sm-t-0">
+                  <div>
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Bounce Rate</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">23.32%</h4>
+                    <span class="tx-12 tx-success tx-roboto">2.7% increased</span>
+                  </div>
+                  <div class="mg-t-20 pd-t-20 bd-t bd-white-1">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Page Views</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">38.20%</h4>
+                    <span class="tx-12 tx-danger tx-roboto">4.65% decreased</span>
+                  </div>
+                  <div class="mg-t-20 pd-t-20 bd-t bd-white-1">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Time On Site</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">12:30</h4>
+                    <span class="tx-12 tx-success tx-roboto">1.22% increased</span>
+                  </div>
+                </div><!-- col-3 -->
+              </div><!-- row -->
+            </div><!-- card -->
+
+            <div class="card bd-gray-400 pd-25 mg-t-20">
+              <div class="d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="tx-13 tx-uppercase tx-white tx-semibold tx-spacing-1">Delivery Overview</h6>
+                  <p class="mg-b-0">Past 30 Days — Last Updated Oct 20, 2017</p>
+                </div>
+                <div class="wd-200 mg-t-20 mg-md-t-0">
+                  <select class="form-control select2" data-placeholder="Choose location">
+                    <option label="Choose one"></option>
+                    <option value="1" selected>New York</option>
+                    <option value="2">San Francisco</option>
+                    <option value="3">Los Angeles</option>
+                    <option value="4">Chicago</option>
+                    <option value="5">Seattle</option>
+                  </select>
+                </div><!-- wd-200 -->
+              </div><!-- d-flex -->
+
+              <div id="mapShiftWorker" class="ht-300 ht-sm-400 mg-t-25"></div>
+
+              <div class="row row-xs mg-t-25">
+                <div class="col-sm-4">
+                  <div class="tx-center pd-y-15 bd bd-white-1">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">New Deliveries</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">12,344</h4>
+                    <span class="tx-12 tx-danger tx-roboto">2.7% increased</span>
+                  </div>
+                </div><!-- col-4 -->
+                <div class="col-sm-4 mg-t-20 mg-sm-t-0">
+                  <div class="tx-center pd-y-15 bd bd-white-1">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Delivered</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">24,333</h4>
+                    <span class="tx-12 tx-danger tx-roboto">2.7% decreased</span>
+                  </div>
+                </div><!-- col-4 -->
+                <div class="col-sm-4 mg-t-20 mg-sm-t-0">
+                  <div class="tx-center pd-y-15 bd bd-white-1">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold">Returned</p>
+                    <h4 class="tx-lato tx-white tx-bold mg-b-0">432</h4>
+                    <span class="tx-12 tx-success tx-roboto">2.7% decreased</span>
+                  </div>
+                </div><!-- col-4 -->
+              </div><!-- row -->
+
+            </div><!-- card -->
+
+
+          </div><!-- col-8 -->
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+
+            <div class="card bd-gray-400 overflow-hidden">
+              <div class="pd-x-25 pd-t-25">
+                <h6 class="tx-13 tx-uppercase tx-white tx-semibold tx-spacing-1 mg-b-20">Storage Overview</h6>
+                <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase mg-b-0">As of Today</p>
+                <h1 class="tx-56 tx-light tx-white mg-b-0">755<span class="tx-teal tx-24">gb</span></h1>
+                <p><span class="tx-primary">80%</span> of free space remaining</p>
+              </div><!-- pd-x-25 -->
+              <div id="ch6" class="ht-115 mg-r--1"></div>
+              <div class="bg-teal pd-x-25 pd-b-25 d-flex justify-content-between">
+                <div class="tx-center">
+                  <h3 class="tx-lato tx-white mg-b-5">989<span class="tx-light op-8 tx-20">gb</span></h3>
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase mg-b-0 tx-white-8">Total Space</p>
+                </div>
+                <div class="tx-center">
+                  <h3 class="tx-lato tx-white mg-b-5">234<span class="tx-light op-8 tx-20">gb</span></h3>
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase mg-b-0 tx-white-8">Used Space</p>
+                </div>
+                <div class="tx-center">
+                  <h3 class="tx-lato tx-white mg-b-5">80<span class="tx-light op-8 tx-20">%</span></h3>
+                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase mg-b-0 tx-white-8">Free Space</p>
+                </div>
+              </div>
+            </div><!-- card -->
+
+            <div class="card bd-gray-400 mg-t-20">
+              <div id="carousel3" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel3" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <div class="bg-black-1 ht-300 pos-relative overflow-hidden d-flex flex-column align-items-start rounded">
+                      <div class="pos-absolute t-15 r-25">
+                        <a href="" class="tx-gray-500 hover-info mg-l-7"><i class="icon ion-more tx-20"></i></a>
+                      </div>
+                      <div class="pd-x-30 pd-t-30 mg-b-auto">
+                        <p class="tx-info tx-uppercase tx-11 tx-semibold tx-mont mg-b-5">Product Item #1</p>
+                        <h5 class="tx-white mg-b-20">Samsung Galaxy S8</h5>
+                        <p class="tx-uppercase tx-11 tx-semibold tx-mont mg-b-0">Purchases</p>
+                        <h2 class="tx-white tx-lato tx-bold mg-b-0">2366</h2>
+                        <span>53.86 purchases/month</span>
+                      </div>
+                      <div id="ch10" class="ht-100 tr-y-1"></div>
+                    </div><!-- d-flex -->
+                  </div>
+                  <div class="carousel-item">
+                    <div class="bg-black-1 ht-300 pos-relative overflow-hidden d-flex flex-column align-items-start rounded">
+                      <div class="pos-absolute t-15 r-25">
+                        <a href="" class="tx-gray-500 hover-info mg-l-7"><i class="icon ion-more tx-20"></i></a>
+                      </div>
+                      <div class="pd-x-30 pd-t-30 mg-b-auto">
+                        <p class="tx-info tx-uppercase tx-11 tx-semibold tx-mont mg-b-5">Product Item #2</p>
+                        <h5 class="tx-white mg-b-20">Apple iPhone 8 Plus</h5>
+                        <p class="tx-uppercase tx-11 tx-semibold tx-mont mg-b-0">Purchases</p>
+                        <h2 class="tx-white tx-lato tx-bold mg-b-0">5632</h2>
+                        <span>120.44 purchases/month</span>
+                      </div>
+                      <div id="ch11" class="ht-100 tr-y-1"></div>
+                    </div><!-- d-flex -->
+                  </div><!-- cardousel-item -->
+                </div><!-- carousel-inner -->
+              </div><!-- carousel -->
+            </div><!-- card -->
+
+            <div class="card card-body bd-0 pd-25 bg-primary mg-t-20">
+              <div class="d-xs-flex justify-content-between align-items-center tx-white mg-b-20">
+                <h6 class="tx-13 tx-uppercase tx-semibold tx-spacing-1 mg-b-0">Server Status</h6>
+                <span class="tx-12 tx-uppercase">Oct 2017</span>
+              </div>
+              <p class="tx-sm tx-white tx-medium mg-b-0">Hardware Monitoring</p>
+              <p class="tx-12 tx-white-7">Intel Dothraki G125H 2.5GHz</p>
+              <div class="progress bg-white-3 rounded-0 mg-b-0">
+                <div class="progress-bar bg-success wd-50p lh-3" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+              </div><!-- progress -->
+              <p class="tx-11 mg-b-0 mg-t-15 tx-white-7">Notice: Lorem ipsum dolor sit amet.</p>
+            </div><!-- card -->
+
+            <div class="card bd-0 mg-t-20">
+              <div id="carousel12" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel12" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel12" data-slide-to="1"></li>
+                  <li data-target="#carousel12" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <div class="bg-br-primary pd-30 ht-300 pos-relative d-flex align-items-center rounded">
+                      <div class="pos-absolute t-20 r-20">
+                        <a href="" class="tx-white-5 hover-info"><i class="icon ion-edit tx-16"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-stats-bars tx-20"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-gear-a tx-20"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-more tx-20"></i></a>
+                      </div>
+                      <div class="tx-white">
+                        <p class="tx-uppercase tx-11 tx-semibold tx-mont tx-spacing-2 tx-white-5">Recent Article</p>
+                        <h5 class="lh-5 mg-b-20">20 Best Travel Tips After 5 Years Of Traveling The World</h5>
+                        <nav class="nav flex-row tx-13">
+                          <a href="" class="tx-white-8 hover-white pd-l-0 pd-r-5">12K+ Views</a>
+                          <a href="" class="tx-white-8 hover-white pd-x-5">234 Shares</a>
+                          <a href="" class="tx-white-8 hover-white pd-x-5">43 Comments</a>
+                        </nav>
+                      </div>
+                    </div><!-- d-flex -->
+                  </div>
+                  <div class="carousel-item">
+                    <div class="bg-info pd-30 ht-300 pos-relative d-flex align-items-center rounded">
+                      <div class="pos-absolute t-20 r-20">
+                        <a href="" class="tx-white-5 hover-info"><i class="icon ion-edit tx-16"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-stats-bars tx-20"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-gear-a tx-20"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-more tx-20"></i></a>
+                      </div>
+                      <div class="tx-white">
+                        <p class="tx-uppercase tx-11 tx-semibold tx-mont tx-spacing-2 tx-white-5">Recent Article</p>
+                        <h5 class="lh-5 mg-b-20">How I Flew Around the World in Business Class for $1,340</h5>
+                        <nav class="nav flex-row tx-13">
+                          <a href="" class="tx-white-8 hover-white pd-l-0 pd-r-5">Edit</a>
+                          <a href="" class="tx-white-8 hover-white pd-x-5">Unpublish</a>
+                          <a href="" class="tx-white-8 hover-white pd-x-5">Delete</a>
+                        </nav>
+                      </div>
+                    </div><!-- d-flex -->
+                  </div>
+                  <div class="carousel-item">
+                    <div class="bg-purple pd-30 ht-300 d-flex pos-relative align-items-center rounded">
+                      <div class="pos-absolute t-20 r-20">
+                        <a href="" class="tx-white-5 hover-info"><i class="icon ion-edit tx-16"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-stats-bars tx-20"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-gear-a tx-20"></i></a>
+                        <a href="" class="tx-white-5 hover-info mg-l-7"><i class="icon ion-more tx-20"></i></a>
+                      </div>
+                      <div class="tx-white">
+                        <p class="tx-uppercase tx-11 tx-semibold tx-mont tx-spacing-2 tx-white-5">Recent Article</p>
+                        <h5 class="lh-5 mg-b-20">10 Reasons Why Travel Makes You a Happier Person</h5>
+                        <nav class="nav flex-row tx-13">
+                          <a href="" class="tx-white-8 hover-white pd-l-0 pd-r-5">Edit</a>
+                          <a href="" class="tx-white-8 hover-white pd-x-5">Unpublish</a>
+                          <a href="" class="tx-white-8 hover-white pd-x-5">Delete</a>
+                        </nav>
+                      </div>
+                    </div><!-- d-flex -->
+                  </div>
+                </div><!-- carousel-inner -->
+              </div><!-- carousel -->
+            </div><!-- card -->
+
+            <div class="card bg-danger bd-0 mg-t-20">
+              <div class="pd-x-25 pd-t-25">
+                <h6 class="tx-13 tx-uppercase tx-white tx-medium tx-spacing-1 mg-b-10">Monthly Statistics</h6>
+                <p class="mg-b-20 tx-white-6">Past 30 Days — Last Updated Oct 14, 2017</p>
+                <div class="row row-sm mg-t-20">
+                  <div class="col">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold tx-white-6">Bounce Rate</p>
+                    <h4 class="tx-lato tx-white tx-bold tx-normal mg-b-0">23.32%</h4>
+                    <span class="tx-12 tx-white-6 tx-roboto">2.7% increased</span>
+                  </div><!-- col -->
+                  <div class="col">
+                    <p class="mg-b-5 tx-uppercase tx-10 tx-mont tx-semibold tx-white-6">Page Views</p>
+                    <h4 class="tx-lato tx-white tx-normal mg-b-0">42.58%</h4>
+                    <span class="tx-12 tx-white-6 tx-roboto">1.5% decreased</span>
+                  </div><!-- col -->
+                </div><!-- row -->
+                <div id="ch13" class="ht-160"></div>
+              </div><!-- pd-x-25 -->
+            </div><!-- card -->
+
+          </div><!-- col-4 -->
+        </div><!-- row -->
+
+      </div><!-- br-pagebody -->
+      <footer class="br-footer">
+        <div class="footer-left">
+          <div class="mg-b-2">Copyright &copy; 2017. Bracket Plus. All Rights Reserved.</div>
+          <div>Attentively and carefully made by ThemePixels.</div>
+        </div>
+        <div class="footer-right d-flex align-items-center">
+          <span class="tx-uppercase mg-r-10">Share:</span>
+          <a target="_blank" class="pd-x-5" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//themepixels.me/bracketplus/intro"><i class="fab fa-facebook tx-20"></i></a>
+          <a target="_blank" class="pd-x-5" href="https://twitter.com/home?status=Bracket%20Plus,%20your%20best%20choice%20for%20premium%20quality%20admin%20template%20from%20Bootstrap.%20Get%20it%20now%20at%20http%3A//themepixels.me/bracketplus/intro"><i class="fab fa-twitter tx-20"></i></a>
+        </div>
+      </footer>
+    </div><!-- br-mainpanel -->
+    <!-- ########## END: MAIN PANEL ########## -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery-ui/ui/widgets/datepicker.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../lib/moment/min/moment.min.js"></script>
+    <script src="../lib/peity/jquery.peity.min.js"></script>
+    <script src="../lib/rickshaw/vendor/d3.min.js"></script>
+    <script src="../lib/rickshaw/vendor/d3.layout.min.js"></script>
+    <script src="../lib/rickshaw/rickshaw.min.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="../lib/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../lib/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="../lib/echarts/echarts.min.js"></script>
+    <script src="../lib/select2/js/select2.full.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyAq8o5-8Y5pudbJMJtDFzb8aHiWJufa5fg"></script>
+    <script src="../lib/gmaps/gmaps.min.js"></script>
+
+    <script src="../js/bracket.js"></script>
+    <script src="../js/map.shiftworker.js"></script>
+    <script src="../js/ResizeSensor.js"></script>
+    <script src="../js/dashboard.dark.js"></script>
+
+  </body>
 </html>
